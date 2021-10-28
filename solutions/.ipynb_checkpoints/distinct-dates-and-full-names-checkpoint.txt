@@ -1,6 +1,0 @@
-SELECT DISTINCT dated
-FROM visited;
-
-SELECT personal, family
-FROM person
-ORDER BY family;

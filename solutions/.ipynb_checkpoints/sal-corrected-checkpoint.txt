@@ -1,7 +1,0 @@
-SELECT person, reading/100.0
-FROM survey
-WHERE quant = 'sal' AND person = 'roe' 
-UNION
-SELECT person, reading
-FROM survey
-WHERE quant = 'sal' AND person != 'roe';

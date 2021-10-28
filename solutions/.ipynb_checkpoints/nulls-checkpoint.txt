@@ -1,8 +1,0 @@
-SELECT *
-FROM visited
-WHERE dated IS NOT NULL
-ORDER BY dated;
-
-SELECT *
-FROM visited
-WHERE dated = '1927-02-08' OR dated IS NULL;
