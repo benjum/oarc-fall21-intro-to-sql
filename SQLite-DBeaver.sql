@@ -3,10 +3,24 @@
 select *
 from albums;
 
--- Metallica and Cellos?
+select count(*)
+from albums;
+
+select count(*)
+from artists;
+
+-- inner vs left join
+select artists.artistId, albums.albumId 
+from artists 
+inner join albums 
+using (artistId);
+
+
+-- an example of exploratory joining
+-- Let's look at cello music ... and Metallica?
 select *
 from albums 
-where title like '%cellos%';
+where title like '%cello%';
 
 -- What artist does this?
 select *
