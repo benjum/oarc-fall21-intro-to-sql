@@ -9,8 +9,8 @@ from albums
 where title like '%cellos%';
 
 -- What artist does this?
-select albums.title, artists.name
-from albums 
+select *
+from albums
 inner join artists 
 using (artistId)
 where albums.title like '%cellos%';
@@ -19,7 +19,22 @@ where albums.title like '%cellos%';
 select t.name, t.composer
 from tracks t;
 
+select a.title, t.name, t.composer 
+from tracks t
+inner join albums a 
+using (albumid);
+
 select albums.title, artists.name, tracks.name
+from albums
+inner join tracks
+using (albumId)
+inner join artists
+using (artistId)
+where albums.title like '%cellos%';
+
+select albums.title as 'Album Title',
+		artists.name as 'Artist Name',
+		tracks.name as 'Track Title'
 from albums
 inner join tracks
 using (albumId)
